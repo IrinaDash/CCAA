@@ -14,34 +14,34 @@ describe('My Little Hero', function () { //define suite title by passing a strin
 
     });
 
-    describe('Elements exist', function () {
-
-        it('TC-002 Label for name', function () {
-            const label = $$('.ant-form-item-required')[0].isDisplayed();
-            expect(label).toEqual(true);
-        });
-
-        it('TC-003 Label for gender', function () {
-            const label = $$('.ant-form-item-required')[1].isDisplayed();
-            expect(label).toEqual(true);
-        });
-
-        it('TC-004 Label for age', function () {
-            const label = $$('.ant-form-item-required')[2].isDisplayed();
-            expect(label).toEqual(true);
-        });
-
-        it('TC-005 Label for story', function () {
-            const label = $$('.ant-form-item-required')[3].isDisplayed();
-            expect(label).toEqual(true);
-        });
-
-        it('TC-006 Label for 5. Upload an image (optional)', function () {
-            const label = $("//label[@title='5. Upload an image (optional)']").isDisplayed();
-            expect(label).toEqual(true);
-        });
-    });
-
+    // describe('Elements exist', function () {
+    //
+    //     it('TC-002 Label for name', function () {
+    //         const label = $$('.ant-form-item-required')[0].isDisplayed();
+    //         expect(label).toEqual(true);
+    //     });
+    //
+    //     it('TC-003 Label for gender', function () {
+    //         const label = $$('.ant-form-item-required')[1].isDisplayed();
+    //         expect(label).toEqual(true);
+    //     });
+    //
+    //     it('TC-004 Label for age', function () {
+    //         const label = $$('.ant-form-item-required')[2].isDisplayed();
+    //         expect(label).toEqual(true);
+    //     });
+    //
+    //     it('TC-005 Label for story', function () {
+    //         const label = $$('.ant-form-item-required')[3].isDisplayed();
+    //         expect(label).toEqual(true);
+    //     });
+    //
+    //     it('TC-006 Label for 5. Upload an image (optional)', function () {
+    //         const label = $("//label[@title='5. Upload an image (optional)']").isDisplayed();
+    //         expect(label).toEqual(true);
+    //     });
+    // });
+    //
     describe('Elements ......', function () {
         it('Verify that Name field is displayed', function () {
             //const nameField = $('#name').isDisplayed();
@@ -51,35 +51,55 @@ describe('My Little Hero', function () { //define suite title by passing a strin
 
         it('Verify that Name field is clickable', function () {
             //const nameField = $('#name').isDisplayed();
-            const nameField = "//input[@id='name']";
+            //const nameField = "//input[@id='name']";
+            const nameField = $('#name');
             const result = $(nameField).isClickable();
             expect(result).toEqual(true);
         });
 
         it('Verify that Name field recieve value', function () {
             const nameField = $('#name');
-            nameField.addValue('HeroName')
+            nameField.setValue('HeroName')
             expect(nameField).toHaveValue('HeroName');
+            nameField.clearValue()
         });
 
-        // it('Verify that Name field is clickable', function () {
-        //     const nameField = $('#name').clearValue();
-        //     nameField.addValue('33333333')
-        //     expect(nameField).toHaveValue('33333333');
-        // });
+        it('Verify that Name field acsept number', function () {
+            const nameField = $('#name');
+            browser.deleteAllCookies();
+            //nameField.clearValue()
+            nameField.setValue('33333')
+            expect(nameField).toHaveValue('33333');
+        });
 
-        // it('Verify that Name field is clickable', function () {
-        //     const radioButton = $("//input[@class='ant-radio-input']")
-        //     radioButton.isClickable()
-        //     expect(radioButton).toEqual(true);
-        //     });
-
-        it('TC-006 Label for 5. Upload an image (optional)', function () {
-            const text = $(sel.image).getAttribute('title');
-            expect(text).toEqual(exp.labelImage);
+        it('should ', function () {
+            expect($(sel.namePlace).getAttribute("placeholder")).toEqual(exp.namePlaceholder);
 
         });
 
-    });
+        //     // it('Verify that radioButton is clickable', function () {
+    //     //     const radioButton = $("//input[@class='ant-radio-input']")
+    //     //     radioButton.isClickable()
+    //     //     expect(radioButton).toEqual(true);
+    //     //     });
+    //
+    //     it('TC-006 Label for 5. Upload an image (optional)', function () {
+    //         expect($(sel.image).getAttribute('title')).toEqual(exp.labelImage);
+    //
+    //     });
+    //     it('TC-006 Label for 5. Upload an image (optional)', function () {
+    //         expect($$(sel.IMAGE1)[4].getText()).toEqual(exp.labelImage);
+    //
+    //     });
+    //
+     });
+    // describe('Elements exist', function ()  {
+    //     it('should ', function () {
+    //
+    //     });
+    //
+    // })
+
+
 
 });

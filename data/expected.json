@@ -1,3 +1,5 @@
 {
-  "labelImage": "5. Upload an image (optional)"
+  "labelImage": "5. Upload an image (optional)",
+  "namePlaceholder": "Hero's name"
+
 }

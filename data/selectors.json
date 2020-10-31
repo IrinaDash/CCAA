@@ -1,4 +1,6 @@
 {
-  "image": "//label[@title='5. Upload an image (optional)']"
-
+  "image": "//label[@title='5. Upload an image (optional)']",
+  "IMAGE1": ".ant-form-item-label",
+  "arrowTypeStory": ".ant-select-arrow",
+  "namePlace": "#name"
 }
