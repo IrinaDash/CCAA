@@ -1,6 +1,11 @@
 {
+  "label": ".ant-form-item-required",
+  "name": "#name",
+  "gender": ".ant-radio-input",
+  "age": "#age",
+  "story": "#story",
+
   "image": "//label[@title='5. Upload an image (optional)']",
   "IMAGE1": ".ant-form-item-label",
-  "arrowTypeStory": ".ant-select-arrow",
-  "namePlace": "#name"
+  "arrowTypeStory": ".ant-select-arrow"
 }
