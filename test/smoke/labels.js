@@ -37,36 +37,35 @@ describe('My Little Hero', function () { //define suite title by passing a strin
         });
 
         it('TC-006 Label for 5. Upload an image (optional)', function () {
-            const label = $(sel.IMAGE1).isDisplayed();
+            const label = $$(sel.IMAGE1)[4].isDisplayed();
             expect(label).toEqual(true);
         });
     });
 
     describe('Labels are correct', function () {
 
-        it('TC-006 Label for name = 1. What is your Hero\'s name?' , function () {
+        it('TC-007 Label for name = 1. What is your Hero\'s name?' , function () {
             const text = $$(sel.label)[0].getAttribute('title');
             expect(text).toEqual(exp.labelName);
         });
 
-        it('TC-007 Label for gender = Label: 2. Please choose a gender.', function () {
-            const label = $$(sel.label)[1].getAttribute('title');
-            expect(label).toEqual(exp.labelGender);
+        it('TC-008 Label for gender = Label: 2. Please choose a gender.', function () {
+            const text = $$(sel.label)[1].getAttribute('title');
+            expect(text).toEqual(exp.labelGender);
         });
 
-        // it('TC-008 Label for age = Label: 3. How old is your Hero?', function () {
-        //     const label = $$('.ant-form-item-required')[2].getAttribute('title');
-        //     expect(label).toEqual(exp.labelAge);
-        // });
-
-        it('TC-009 Label for story', function () {
-            const label = $$(sel.label)[3].getAttribute('title');
-            expect(label).toEqual(exp.labelStory);
+        it('TC-009 Label for age = 3. How old is your hero?', function () {
+            const text = $$(sel.label)[2].getAttribute('title');
+            expect(text).toEqual(exp.labelAge);
         });
 
-        it('TC-010 Label for 5. Upload an image (optional)', function () {
-            const label = $$(sel.image)[4].getAttribute('title');
-            expect(label).toEqual(exp.labelImage);
+        it('TC-0010 Label for story', function () {
+            const text = $$(sel.label)[3].getAttribute('title');
+            expect(text).toEqual(exp.labelStory);
+        });
+        xit('TC-011 Label for 5. Upload an image (optional)', function () {
+            const text = $$(sel.IMAGE1)[4].getText();
+            expect(text).toEqual(exp.labelImage);
         });
     });
 
